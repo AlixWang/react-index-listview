@@ -1,9 +1,9 @@
-import resolve from '@rollup/plugin-node-resolve';
-import babel from '@rollup/plugin-babel';
+import resolve from '@rollup/plugin-node-resolve'
+import babel from '@rollup/plugin-babel'
 import path from 'path'
 
 export default {
-  input: path.resolve(__dirname,'src/index.tsx'),
+  input: path.resolve(__dirname, 'src/index.tsx'),
   output: {
     file: 'lib/lib.js',
     format: 'esm'
@@ -11,9 +11,9 @@ export default {
   plugins: [
     resolve(),
     babel({
-      exclude: '/node_modules/**',
-      include: './src'
+      babelHelpers: 'runtime',
+      extensions: ['jsx', 'tsx', 'ts', 'js']
     })
-],
+  ],
   external: ['react']
 }
