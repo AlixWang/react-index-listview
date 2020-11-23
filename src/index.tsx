@@ -1,7 +1,7 @@
-import { FunctionComponent } from "react";
+import React, { FunctionComponent } from 'react'
 
 const IndexListView:FunctionComponent = () => {
-	return <></>
-} 
+  return <></>
+}
 
 export default IndexListView

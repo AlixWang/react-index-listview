@@ -48,9 +48,14 @@
   },
   "dependencies": {},
   "husky": {
-    "pre-commit": "lint-staged"
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
   },
   "lint-staged": {
-    "src/**/*":["eslint --fix", "git add"]
+    "src/**/*.{ts,tsx}": [
+      "eslint --fix",
+      "git add"
+    ]
   }
 }
